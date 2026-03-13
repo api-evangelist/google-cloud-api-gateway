@@ -1,0 +1,125 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/api-evangelist/google-cloud-api-gateway/refs/heads/main/json-schema/json-schema.yml
+title: Google Cloud API Gateway Schema
+description: JSON Schema for Google Cloud API Gateway API resources.
+type: object
+$defs:
+  Gateway:
+    type: object
+    title: Gateway
+    description: An API Gateway instance that serves API traffic.
+    properties:
+      name:
+        type: string
+        description: >-
+          The gateway name in the format
+          projects/{project}/locations/{location}/gateways/{gateway}.
+      displayName:
+        type: string
+        description: A human-readable display name for the gateway.
+      apiConfig:
+        type: string
+        description: The API config resource name associated with this gateway.
+      state:
+        type: string
+        description: The current state of the gateway.
+        enum:
+          - STATE_UNSPECIFIED
+          - CREATING
+          - ACTIVE
+          - FAILED
+          - DELETING
+          - UPDATING
+      defaultHostname:
+        type: string
+        description: The default hostname for the API gateway.
+      createTime:
+        type: string
+        format: date-time
+        description: The time when the gateway was created.
+      updateTime:
+        type: string
+        format: date-time
+        description: The time when the gateway was last updated.
+      labels:
+        type: object
+        additionalProperties:
+          type: string
+        description: Labels attached to the gateway.
+    required:
+      - name
+      - apiConfig
+  Api:
+    type: object
+    title: API
+    description: An API resource managed by API Gateway.
+    properties:
+      name:
+        type: string
+        description: >-
+          The API name in the format
+          projects/{project}/locations/global/apis/{api}.
+      displayName:
+        type: string
+        description: A human-readable display name for the API.
+      managedService:
+        type: string
+        description: The managed service name associated with the API.
+      state:
+        type: string
+        description: The current state of the API.
+        enum:
+          - STATE_UNSPECIFIED
+          - CREATING
+          - ACTIVE
+          - FAILED
+          - DELETING
+          - UPDATING
+      createTime:
+        type: string
+        format: date-time
+        description: The time when the API was created.
+      updateTime:
+        type: string
+        format: date-time
+        description: The time when the API was last updated.
+    required:
+      - name
+  ApiConfig:
+    type: object
+    title: API Configuration
+    description: An API configuration that defines the API surface for a gateway.
+    properties:
+      name:
+        type: string
+        description: The API config resource name.
+      displayName:
+        type: string
+        description: A human-readable display name.
+      gatewayServiceAccount:
+        type: string
+        description: The service account used by the gateway for this config.
+      serviceConfigId:
+        type: string
+        description: The service config ID from Service Management.
+      state:
+        type: string
+        description: The current state of the API config.
+        enum:
+          - STATE_UNSPECIFIED
+          - CREATING
+          - ACTIVE
+          - FAILED
+          - DELETING
+          - UPDATING
+          - ACTIVATING
+      createTime:
+        type: string
+        format: date-time
+        description: The time when the API config was created.
+      updateTime:
+        type: string
+        format: date-time
+        description: The time when the API config was last updated.
+    required:
+      - name

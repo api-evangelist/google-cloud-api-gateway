@@ -1,0 +1,451 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud API Gateway API
+  description: >-
+    The API Gateway API enables creation and management of API gateways, API
+    configurations, and APIs. It provides secure access to serverless backend
+    services through well-defined REST APIs described using OpenAPI
+    specifications.
+  version: v1
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/api-gateway/docs
+servers:
+  - url: https://apigateway.googleapis.com
+paths:
+  /v1/projects/{project}/locations/{location}/gateways:
+    get:
+      operationId: listGateways
+      summary: List gateways
+      description: Lists gateways in a project and location.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListGatewaysResponse'
+    post:
+      operationId: createGateway
+      summary: Create a gateway
+      description: Creates a new API gateway.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: gatewayId
+          in: query
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gateway'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+  /v1/projects/{project}/locations/{location}/gateways/{gateway}:
+    get:
+      operationId: getGateway
+      summary: Get a gateway
+      description: Gets an API gateway.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: gateway
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gateway'
+    patch:
+      operationId: updateGateway
+      summary: Update a gateway
+      description: Updates an API gateway.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: gateway
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gateway'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+    delete:
+      operationId: deleteGateway
+      summary: Delete a gateway
+      description: Deletes an API gateway.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: gateway
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+  /v1/projects/{project}/locations/global/apis:
+    get:
+      operationId: listApis
+      summary: List APIs
+      description: Lists APIs in a project.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListApisResponse'
+    post:
+      operationId: createApi
+      summary: Create an API
+      description: Creates a new API resource.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: apiId
+          in: query
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Api'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+  /v1/projects/{project}/locations/global/apis/{api}:
+    get:
+      operationId: getApi
+      summary: Get an API
+      description: Gets an API resource.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Api'
+    delete:
+      operationId: deleteApi
+      summary: Delete an API
+      description: Deletes an API resource.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+  /v1/projects/{project}/locations/global/apis/{api}/configs:
+    get:
+      operationId: listApiConfigs
+      summary: List API configurations
+      description: Lists API configurations for an API.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListApiConfigsResponse'
+    post:
+      operationId: createApiConfig
+      summary: Create an API configuration
+      description: Creates a new API configuration for an API.
+      parameters:
+        - name: project
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: apiConfigId
+          in: query
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApiConfig'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+components:
+  schemas:
+    Gateway:
+      type: object
+      properties:
+        name:
+          type: string
+          description: >-
+            The gateway name in the format
+            projects/{project}/locations/{location}/gateways/{gateway}.
+        displayName:
+          type: string
+        apiConfig:
+          type: string
+          description: The API config associated with this gateway.
+        state:
+          type: string
+          enum:
+            - STATE_UNSPECIFIED
+            - CREATING
+            - ACTIVE
+            - FAILED
+            - DELETING
+            - UPDATING
+        defaultHostname:
+          type: string
+          description: The default API gateway host name.
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+    Api:
+      type: object
+      properties:
+        name:
+          type: string
+          description: >-
+            The API resource name in the format
+            projects/{project}/locations/global/apis/{api}.
+        displayName:
+          type: string
+        managedService:
+          type: string
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+        state:
+          type: string
+          enum:
+            - STATE_UNSPECIFIED
+            - CREATING
+            - ACTIVE
+            - FAILED
+            - DELETING
+            - UPDATING
+    ApiConfig:
+      type: object
+      properties:
+        name:
+          type: string
+        displayName:
+          type: string
+        gatewayServiceAccount:
+          type: string
+        serviceConfigId:
+          type: string
+        state:
+          type: string
+          enum:
+            - STATE_UNSPECIFIED
+            - CREATING
+            - ACTIVE
+            - FAILED
+            - DELETING
+            - UPDATING
+            - ACTIVATING
+        openapiDocuments:
+          type: array
+          items:
+            type: object
+            properties:
+              document:
+                type: object
+                properties:
+                  path:
+                    type: string
+                  contents:
+                    type: string
+                    format: byte
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
+    ListGatewaysResponse:
+      type: object
+      properties:
+        gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/Gateway'
+        nextPageToken:
+          type: string
+    ListApisResponse:
+      type: object
+      properties:
+        apis:
+          type: array
+          items:
+            $ref: '#/components/schemas/Api'
+        nextPageToken:
+          type: string
+    ListApiConfigsResponse:
+      type: object
+      properties:
+        apiConfigs:
+          type: array
+          items:
+            $ref: '#/components/schemas/ApiConfig'
+        nextPageToken:
+          type: string

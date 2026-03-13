@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcp": "https://cloud.google.com/api-gateway/docs/reference/rest/v1/",
+    "Gateway": "gcp:projects.locations.gateways",
+    "Api": "gcp:projects.locations.apis",
+    "ApiConfig": "gcp:projects.locations.apis.configs",
+    "name": "schema:name",
+    "displayName": "schema:alternateName",
+    "description": "schema:description",
+    "state": "schema:status",
+    "defaultHostname": "schema:url",
+    "apiConfig": "schema:hasPart",
+    "managedService": "schema:serviceType",
+    "createTime": "schema:dateCreated",
+    "updateTime": "schema:dateModified",
+    "labels": {
+      "@id": "schema:keywords",
+      "@type": "@id"
+    }
+  }
+}
