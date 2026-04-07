@@ -16,10 +16,10 @@ type: Index
 tags:
   - API Gateway
   - API Management
-  - Serverless
-  - Security
   - Authentication
   - Google Cloud
+  - Security
+  - Serverless
 apis:
   - name: Google Cloud API Gateway API
     description: >-
@@ -42,8 +42,8 @@ apis:
         url: json-schema/json-schema.yml
     tags:
       - API Gateway
-      - Serverless
       - API Management
+      - Serverless
 common:
   - type: Portal
     url: https://cloud.google.com/api-gateway

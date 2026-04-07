@@ -36,6 +36,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListGatewaysResponse'
+      tags:
+        - Projects
     post:
       operationId: createGateway
       summary: Google Cloud API Gateway Create a gateway
@@ -68,6 +70,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/{location}/gateways/{gateway}:
     get:
       operationId: getGateway
@@ -96,6 +100,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Gateway'
+      tags:
+        - Projects
     patch:
       operationId: updateGateway
       summary: Google Cloud API Gateway Update a gateway
@@ -129,6 +135,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
     delete:
       operationId: deleteGateway
       summary: Google Cloud API Gateway Delete a gateway
@@ -156,6 +164,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/global/apis:
     get:
       operationId: listApis
@@ -174,6 +184,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListApisResponse'
+      tags:
+        - Projects
     post:
       operationId: createApi
       summary: Google Cloud API Gateway Create an API
@@ -201,6 +213,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/global/apis/{api}:
     get:
       operationId: getApi
@@ -224,6 +238,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Api'
+      tags:
+        - Projects
     delete:
       operationId: deleteApi
       summary: Google Cloud API Gateway Delete an API
@@ -246,6 +262,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/global/apis/{api}/configs:
     get:
       operationId: listApiConfigs
@@ -269,6 +287,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListApiConfigsResponse'
+      tags:
+        - Projects
     post:
       operationId: createApiConfig
       summary: Google Cloud API Gateway Create an API configuration
@@ -301,6 +321,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
 components:
   schemas:
     Gateway:
@@ -449,3 +471,5 @@ components:
             $ref: '#/components/schemas/ApiConfig'
         nextPageToken:
           type: string
+tags:
+  - name: Projects
