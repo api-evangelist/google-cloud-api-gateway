@@ -16,7 +16,7 @@ paths:
   /v1/projects/{project}/locations/{location}/gateways:
     get:
       operationId: listGateways
-      summary: List gateways
+      summary: Google Cloud API Gateway List gateways
       description: Lists gateways in a project and location.
       parameters:
         - name: project
@@ -38,7 +38,7 @@ paths:
                 $ref: '#/components/schemas/ListGatewaysResponse'
     post:
       operationId: createGateway
-      summary: Create a gateway
+      summary: Google Cloud API Gateway Create a gateway
       description: Creates a new API gateway.
       parameters:
         - name: project
@@ -71,7 +71,7 @@ paths:
   /v1/projects/{project}/locations/{location}/gateways/{gateway}:
     get:
       operationId: getGateway
-      summary: Get a gateway
+      summary: Google Cloud API Gateway Get a gateway
       description: Gets an API gateway.
       parameters:
         - name: project
@@ -98,7 +98,7 @@ paths:
                 $ref: '#/components/schemas/Gateway'
     patch:
       operationId: updateGateway
-      summary: Update a gateway
+      summary: Google Cloud API Gateway Update a gateway
       description: Updates an API gateway.
       parameters:
         - name: project
@@ -131,7 +131,7 @@ paths:
                 $ref: '#/components/schemas/Operation'
     delete:
       operationId: deleteGateway
-      summary: Delete a gateway
+      summary: Google Cloud API Gateway Delete a gateway
       description: Deletes an API gateway.
       parameters:
         - name: project
@@ -159,7 +159,7 @@ paths:
   /v1/projects/{project}/locations/global/apis:
     get:
       operationId: listApis
-      summary: List APIs
+      summary: Google Cloud API Gateway List APIs
       description: Lists APIs in a project.
       parameters:
         - name: project
@@ -176,7 +176,7 @@ paths:
                 $ref: '#/components/schemas/ListApisResponse'
     post:
       operationId: createApi
-      summary: Create an API
+      summary: Google Cloud API Gateway Create an API
       description: Creates a new API resource.
       parameters:
         - name: project
@@ -204,7 +204,7 @@ paths:
   /v1/projects/{project}/locations/global/apis/{api}:
     get:
       operationId: getApi
-      summary: Get an API
+      summary: Google Cloud API Gateway Get an API
       description: Gets an API resource.
       parameters:
         - name: project
@@ -226,7 +226,7 @@ paths:
                 $ref: '#/components/schemas/Api'
     delete:
       operationId: deleteApi
-      summary: Delete an API
+      summary: Google Cloud API Gateway Delete an API
       description: Deletes an API resource.
       parameters:
         - name: project
@@ -249,7 +249,7 @@ paths:
   /v1/projects/{project}/locations/global/apis/{api}/configs:
     get:
       operationId: listApiConfigs
-      summary: List API configurations
+      summary: Google Cloud API Gateway List API configurations
       description: Lists API configurations for an API.
       parameters:
         - name: project
@@ -271,7 +271,7 @@ paths:
                 $ref: '#/components/schemas/ListApiConfigsResponse'
     post:
       operationId: createApiConfig
-      summary: Create an API configuration
+      summary: Google Cloud API Gateway Create an API configuration
       description: Creates a new API configuration for an API.
       parameters:
         - name: project
