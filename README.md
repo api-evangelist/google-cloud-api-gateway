@@ -19,3 +19,5 @@ Google Cloud API Gateway enables you to provide secure access to your backend se
 ## Maintainer
 
 - **Kin Lane** - kin@apievangelist.com
+
+_Last updated: 2026-04-28_
