@@ -1,0 +1,559 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud API Gateway API — Projects
+  description: 'Google Cloud API Gateway API — Projects. 11 operations. Lead operation: Google Cloud API Gateway List APIs.
+    Self-contained Naftiko capability covering one Google Cloud Api Gateway business surface.'
+  tags:
+  - Google Cloud Api Gateway
+  - Projects
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_API_GATEWAY_API_KEY: GOOGLE_CLOUD_API_GATEWAY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-projects
+    baseUri: https://apigateway.googleapis.com
+    description: Google Cloud API Gateway API — Projects business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-projects-project-locations-global-apis
+      path: /v1/projects/{project}/locations/global/apis
+      operations:
+      - name: listapis
+        method: GET
+        description: Google Cloud API Gateway List APIs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+      - name: createapi
+        method: POST
+        description: Google Cloud API Gateway Create an API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: apiId
+          in: query
+          type: string
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: v1-projects-project-locations-global-apis-api
+      path: /v1/projects/{project}/locations/global/apis/{api}
+      operations:
+      - name: getapi
+        method: GET
+        description: Google Cloud API Gateway Get an API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: api
+          in: path
+          type: string
+          required: true
+      - name: deleteapi
+        method: DELETE
+        description: Google Cloud API Gateway Delete an API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: api
+          in: path
+          type: string
+          required: true
+    - name: v1-projects-project-locations-global-apis-api-configs
+      path: /v1/projects/{project}/locations/global/apis/{api}/configs
+      operations:
+      - name: listapiconfigs
+        method: GET
+        description: Google Cloud API Gateway List API configurations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: api
+          in: path
+          type: string
+          required: true
+      - name: createapiconfig
+        method: POST
+        description: Google Cloud API Gateway Create an API configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: api
+          in: path
+          type: string
+          required: true
+        - name: apiConfigId
+          in: query
+          type: string
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: v1-projects-project-locations-location-gateways
+      path: /v1/projects/{project}/locations/{location}/gateways
+      operations:
+      - name: listgateways
+        method: GET
+        description: Google Cloud API Gateway List gateways
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+      - name: creategateway
+        method: POST
+        description: Google Cloud API Gateway Create a gateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: gatewayId
+          in: query
+          type: string
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: v1-projects-project-locations-location-gateways-gateway
+      path: /v1/projects/{project}/locations/{location}/gateways/{gateway}
+      operations:
+      - name: getgateway
+        method: GET
+        description: Google Cloud API Gateway Get a gateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: gateway
+          in: path
+          type: string
+          required: true
+      - name: updategateway
+        method: PATCH
+        description: Google Cloud API Gateway Update a gateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: gateway
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletegateway
+        method: DELETE
+        description: Google Cloud API Gateway Delete a gateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: gateway
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: openapi-projects-rest
+    port: 8080
+    description: REST adapter for Google Cloud API Gateway API — Projects. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/v1/projects/{project}/locations/global/apis
+      name: v1-projects-project-locations-global-apis
+      description: REST surface for v1-projects-project-locations-global-apis.
+      operations:
+      - method: GET
+        name: listapis
+        description: Google Cloud API Gateway List APIs
+        call: openapi-projects.listapis
+        with:
+          project: rest.project
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createapi
+        description: Google Cloud API Gateway Create an API
+        call: openapi-projects.createapi
+        with:
+          project: rest.project
+          apiId: rest.apiId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/projects/{project}/locations/global/apis/{api}
+      name: v1-projects-project-locations-global-apis-api
+      description: REST surface for v1-projects-project-locations-global-apis-api.
+      operations:
+      - method: GET
+        name: getapi
+        description: Google Cloud API Gateway Get an API
+        call: openapi-projects.getapi
+        with:
+          project: rest.project
+          api: rest.api
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteapi
+        description: Google Cloud API Gateway Delete an API
+        call: openapi-projects.deleteapi
+        with:
+          project: rest.project
+          api: rest.api
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/projects/{project}/locations/global/apis/{api}/configs
+      name: v1-projects-project-locations-global-apis-api-configs
+      description: REST surface for v1-projects-project-locations-global-apis-api-configs.
+      operations:
+      - method: GET
+        name: listapiconfigs
+        description: Google Cloud API Gateway List API configurations
+        call: openapi-projects.listapiconfigs
+        with:
+          project: rest.project
+          api: rest.api
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createapiconfig
+        description: Google Cloud API Gateway Create an API configuration
+        call: openapi-projects.createapiconfig
+        with:
+          project: rest.project
+          api: rest.api
+          apiConfigId: rest.apiConfigId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/projects/{project}/locations/{location}/gateways
+      name: v1-projects-project-locations-location-gateways
+      description: REST surface for v1-projects-project-locations-location-gateways.
+      operations:
+      - method: GET
+        name: listgateways
+        description: Google Cloud API Gateway List gateways
+        call: openapi-projects.listgateways
+        with:
+          project: rest.project
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: creategateway
+        description: Google Cloud API Gateway Create a gateway
+        call: openapi-projects.creategateway
+        with:
+          project: rest.project
+          location: rest.location
+          gatewayId: rest.gatewayId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/projects/{project}/locations/{location}/gateways/{gateway}
+      name: v1-projects-project-locations-location-gateways-gateway
+      description: REST surface for v1-projects-project-locations-location-gateways-gateway.
+      operations:
+      - method: GET
+        name: getgateway
+        description: Google Cloud API Gateway Get a gateway
+        call: openapi-projects.getgateway
+        with:
+          project: rest.project
+          location: rest.location
+          gateway: rest.gateway
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updategateway
+        description: Google Cloud API Gateway Update a gateway
+        call: openapi-projects.updategateway
+        with:
+          project: rest.project
+          location: rest.location
+          gateway: rest.gateway
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletegateway
+        description: Google Cloud API Gateway Delete a gateway
+        call: openapi-projects.deletegateway
+        with:
+          project: rest.project
+          location: rest.location
+          gateway: rest.gateway
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-projects-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud API Gateway API — Projects. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: google-cloud-api-gateway-list
+      description: Google Cloud API Gateway List APIs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-projects.listapis
+      with:
+        project: tools.project
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-create
+      description: Google Cloud API Gateway Create an API
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-projects.createapi
+      with:
+        project: tools.project
+        apiId: tools.apiId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-get
+      description: Google Cloud API Gateway Get an API
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-projects.getapi
+      with:
+        project: tools.project
+        api: tools.api
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-delete
+      description: Google Cloud API Gateway Delete an API
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: openapi-projects.deleteapi
+      with:
+        project: tools.project
+        api: tools.api
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-list-2
+      description: Google Cloud API Gateway List API configurations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-projects.listapiconfigs
+      with:
+        project: tools.project
+        api: tools.api
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-create-2
+      description: Google Cloud API Gateway Create an API configuration
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-projects.createapiconfig
+      with:
+        project: tools.project
+        api: tools.api
+        apiConfigId: tools.apiConfigId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-list-3
+      description: Google Cloud API Gateway List gateways
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-projects.listgateways
+      with:
+        project: tools.project
+        location: tools.location
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-create-3
+      description: Google Cloud API Gateway Create a gateway
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-projects.creategateway
+      with:
+        project: tools.project
+        location: tools.location
+        gatewayId: tools.gatewayId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-get-2
+      description: Google Cloud API Gateway Get a gateway
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-projects.getgateway
+      with:
+        project: tools.project
+        location: tools.location
+        gateway: tools.gateway
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-update
+      description: Google Cloud API Gateway Update a gateway
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: openapi-projects.updategateway
+      with:
+        project: tools.project
+        location: tools.location
+        gateway: tools.gateway
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-api-gateway-delete-2
+      description: Google Cloud API Gateway Delete a gateway
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: openapi-projects.deletegateway
+      with:
+        project: tools.project
+        location: tools.location
+        gateway: tools.gateway
+      outputParameters:
+      - type: object
+        mapping: $.
