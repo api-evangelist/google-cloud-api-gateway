@@ -1,0 +1,307 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud API Gateway API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud API Gateway List gateways",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/:location/gateways",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists gateways in a project and location."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Create a gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/:location/gateways",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "gatewayId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new API gateway."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Get a gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/:location/gateways/:gateway",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "gateway",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets an API gateway."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Update a gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/:location/gateways/:gateway",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "gateway",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an API gateway."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Delete a gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/:location/gateways/:gateway",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "gateway",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes an API gateway."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway List APIs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/global/apis",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists APIs in a project."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Create an API",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/global/apis",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "apiId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new API resource."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Get an API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/global/apis/:api",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets an API resource."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Delete an API",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/global/apis/:api",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes an API resource."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway List API configurations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/global/apis/:api/configs",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists API configurations for an API."
+        },
+        {
+          "info": {
+            "name": "Google Cloud API Gateway Create an API configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://apigateway.googleapis.com/v1/projects/:project/locations/global/apis/:api/configs",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "apiConfigId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new API configuration for an API."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
