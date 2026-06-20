@@ -5,7 +5,7 @@ description: >-
   that is consistent across all of your services. It is a fully managed, pay-per-use gateway designed for serverless
   workloads, supporting Cloud Functions, Cloud Run, and App Engine backends. API Gateway includes security features like
   authentication and API key validation, as well as monitoring, logging, and tracing capabilities.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-api-gateway/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
