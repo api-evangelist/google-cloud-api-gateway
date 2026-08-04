@@ -1,0 +1,1394 @@
+{
+  "info": {
+    "_postman_id": "9f7c37bd-8b2f-4eb7-aff9-c9a77b5dab7c",
+    "name": "Google Cloud API Gateway Projects API",
+    "description": "The API Gateway API enables creation and management of API gateways, API configurations, and APIs. It provides secure access to serverless backend services through well-defined REST APIs described using OpenAPI specifications.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:45:50.000Z",
+    "updatedAt": "2026-07-28T01:45:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9f7c37bd-8b2f-4eb7-aff9-c9a77b5dab7c"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "item": [
+        {
+          "name": "projects",
+          "item": [
+            {
+              "name": "{project}",
+              "item": [
+                {
+                  "name": "locations",
+                  "item": [
+                    {
+                      "name": "{location}",
+                      "item": [
+                        {
+                          "name": "gateways",
+                          "item": [
+                            {
+                              "name": "{gateway}",
+                              "item": [
+                                {
+                                  "name": "Google Cloud API Gateway Get a gateway",
+                                  "id": "f8929f38-477d-4506-82fb-5907ecd1590c",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways/:gateway",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "gateways",
+                                        ":gateway"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "1dfc1728-f0ea-480c-9e74-995a6cbaa27a",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "839f3977-9323-45dc-9312-928062dbad66",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "2d388524-bfe8-4962-a14d-298d2f476dfa",
+                                          "key": "gateway",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Gets an API gateway."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "69d4caee-32a2-47ea-9b60-d5657100288d",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways/:gateway",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "gateways",
+                                            ":gateway"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "gateway"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiConfig\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"defaultHostname\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"exf3\": \"<string>\"\n  }\n}",
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-69d4caee-32a2-47ea-9b60-d5657100288d"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-f8929f38-477d-4506-82fb-5907ecd1590c"
+                                },
+                                {
+                                  "name": "Google Cloud API Gateway Update a gateway",
+                                  "id": "587782a6-2921-44a7-ae5f-2b06d1d72832",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "PATCH",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiConfig\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"defaultHostname\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"exf3\": \"<string>\"\n  }\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways/:gateway",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "gateways",
+                                        ":gateway"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "0e25f29f-4eb8-4323-b35a-fb79d60dce21",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "c5a7871c-d022-49ba-9aee-f1a0bce19d3a",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "a86af997-9fc9-4647-8de0-c9c489bcee5f",
+                                          "key": "gateway",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Updates an API gateway."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "11c15f30-cc2f-48a5-85c5-a7a3eb8cc7ce",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "PATCH",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiConfig\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"defaultHostname\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"exf3\": \"<string>\"\n  }\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways/:gateway",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "gateways",
+                                            ":gateway"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "gateway"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-11c15f30-cc2f-48a5-85c5-a7a3eb8cc7ce"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-587782a6-2921-44a7-ae5f-2b06d1d72832"
+                                },
+                                {
+                                  "name": "Google Cloud API Gateway Delete a gateway",
+                                  "id": "668adb21-ad7d-492f-ac44-869ce1088ab5",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways/:gateway",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "gateways",
+                                        ":gateway"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "570fc40d-23e3-416a-93fa-7981d21cea76",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "9944e6bf-5f09-4437-bb7c-fd5eed68c624",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "5ad621a1-c6a4-4457-b60a-e1154dfaf400",
+                                          "key": "gateway",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Deletes an API gateway."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "dcfb38e0-df0d-4f4f-af89-fc0ba6b6f057",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways/:gateway",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "gateways",
+                                            ":gateway"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "gateway"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-dcfb38e0-df0d-4f4f-af89-fc0ba6b6f057"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-668adb21-ad7d-492f-ac44-869ce1088ab5"
+                                }
+                              ],
+                              "id": "6155b19d-d6eb-43f3-9742-f465b20cdbd9",
+                              "createdAt": "2026-07-28T01:45:51.000Z",
+                              "updatedAt": "2026-07-28T01:45:51.000Z",
+                              "uid": "35240-6155b19d-d6eb-43f3-9742-f465b20cdbd9"
+                            },
+                            {
+                              "name": "Google Cloud API Gateway List gateways",
+                              "id": "8db829b1-1f47-4fb4-b354-5c5862124aca",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "gateways"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "a27898f1-632c-476d-800b-0dc140bfb4a2",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "33b26bc0-7315-44a7-9909-89b0ba844129",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Lists gateways in a project and location."
+                              },
+                              "response": [
+                                {
+                                  "id": "4ca4d053-2b15-4932-a746-e50315f130f5",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "gateways"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"gateways\": [\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"apiConfig\": \"<string>\",\n      \"state\": \"STATE_UNSPECIFIED\",\n      \"defaultHostname\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"labels\": {\n        \"uta2\": \"<string>\",\n        \"anim_44\": \"<string>\"\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"apiConfig\": \"<string>\",\n      \"state\": \"DELETING\",\n      \"defaultHostname\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"labels\": {\n        \"culpa_7\": \"<string>\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-4ca4d053-2b15-4932-a746-e50315f130f5"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:45:51.000Z",
+                              "updatedAt": "2026-07-28T01:45:51.000Z",
+                              "uid": "35240-8db829b1-1f47-4fb4-b354-5c5862124aca"
+                            },
+                            {
+                              "name": "Google Cloud API Gateway Create a gateway",
+                              "id": "cb23ccba-bea6-42b1-be9a-2f4baf90b824",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiConfig\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"defaultHostname\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"exf3\": \"<string>\"\n  }\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways?gatewayId=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "gateways"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "gatewayId",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "606e6c73-fd39-4376-bda2-3b88d3ea5295",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "67d9dfb1-8257-41b9-a009-44ae89cce6c1",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Creates a new API gateway."
+                              },
+                              "response": [
+                                {
+                                  "id": "4e6f47c1-eb92-471d-917d-917d3ba0b4fc",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiConfig\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"defaultHostname\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"exf3\": \"<string>\"\n  }\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/gateways?gatewayId=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "gateways"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "gatewayId",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-4e6f47c1-eb92-471d-917d-917d3ba0b4fc"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:45:51.000Z",
+                              "updatedAt": "2026-07-28T01:45:51.000Z",
+                              "uid": "35240-cb23ccba-bea6-42b1-be9a-2f4baf90b824"
+                            }
+                          ],
+                          "id": "d48ad96b-e471-47cf-8bdd-2b3de33c5914",
+                          "createdAt": "2026-07-28T01:45:51.000Z",
+                          "updatedAt": "2026-07-28T01:45:51.000Z",
+                          "uid": "35240-d48ad96b-e471-47cf-8bdd-2b3de33c5914"
+                        }
+                      ],
+                      "id": "fa457055-dba5-44fe-98df-1656ccb85ac7",
+                      "createdAt": "2026-07-28T01:45:51.000Z",
+                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                      "uid": "35240-fa457055-dba5-44fe-98df-1656ccb85ac7"
+                    },
+                    {
+                      "name": "global",
+                      "item": [
+                        {
+                          "name": "apis",
+                          "item": [
+                            {
+                              "name": "{api}",
+                              "item": [
+                                {
+                                  "name": "configs",
+                                  "item": [
+                                    {
+                                      "name": "Google Cloud API Gateway List API configurations",
+                                      "id": "a5707a08-4d7c-42a0-b24f-1bc488c5a8a9",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api/configs",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            "global",
+                                            "apis",
+                                            ":api",
+                                            "configs"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "04ae7482-8c26-4b29-8991-1bf8691ea723",
+                                              "key": "project",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "58e60f68-b045-4fa0-955e-0f277feddbd3",
+                                              "key": "api",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            }
+                                          ]
+                                        },
+                                        "description": "Lists API configurations for an API."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "db7c5058-d905-4b44-9662-7e99d4348748",
+                                          "name": "Successful response",
+                                          "originalRequest": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api/configs",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "v1",
+                                                "projects",
+                                                ":project",
+                                                "locations",
+                                                "global",
+                                                "apis",
+                                                ":api",
+                                                "configs"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "project"
+                                                },
+                                                {
+                                                  "key": "api"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"apiConfigs\": [\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"gatewayServiceAccount\": \"<string>\",\n      \"serviceConfigId\": \"<string>\",\n      \"state\": \"STATE_UNSPECIFIED\",\n      \"openapiDocuments\": [\n        {\n          \"document\": {\n            \"path\": \"<string>\",\n            \"contents\": \"<string>\"\n          }\n        },\n        {\n          \"document\": {\n            \"path\": \"<string>\",\n            \"contents\": \"<string>\"\n          }\n        }\n      ],\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"gatewayServiceAccount\": \"<string>\",\n      \"serviceConfigId\": \"<string>\",\n      \"state\": \"UPDATING\",\n      \"openapiDocuments\": [\n        {\n          \"document\": {\n            \"path\": \"<string>\",\n            \"contents\": \"<string>\"\n          }\n        },\n        {\n          \"document\": {\n            \"path\": \"<string>\",\n            \"contents\": \"<string>\"\n          }\n        }\n      ],\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                          "createdAt": "2026-07-28T01:45:51.000Z",
+                                          "updatedAt": "2026-07-28T01:45:51.000Z",
+                                          "uid": "35240-db7c5058-d905-4b44-9662-7e99d4348748"
+                                        }
+                                      ],
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-a5707a08-4d7c-42a0-b24f-1bc488c5a8a9"
+                                    },
+                                    {
+                                      "name": "Google Cloud API Gateway Create an API configuration",
+                                      "id": "44e35db4-a9b8-45d5-bc23-6573310cc2e1",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "POST",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"gatewayServiceAccount\": \"<string>\",\n  \"serviceConfigId\": \"<string>\",\n  \"state\": \"DELETING\",\n  \"openapiDocuments\": [\n    {\n      \"document\": {\n        \"path\": \"<string>\",\n        \"contents\": \"<string>\"\n      }\n    },\n    {\n      \"document\": {\n        \"path\": \"<string>\",\n        \"contents\": \"<string>\"\n      }\n    }\n  ],\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api/configs?apiConfigId=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            "global",
+                                            "apis",
+                                            ":api",
+                                            "configs"
+                                          ],
+                                          "query": [
+                                            {
+                                              "key": "apiConfigId",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "d84eba8d-983c-47a4-83fd-2e567f2ce7cc",
+                                              "key": "project",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "3a97dbee-35f0-4f28-bd29-c0736b80a8bf",
+                                              "key": "api",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            }
+                                          ]
+                                        },
+                                        "description": "Creates a new API configuration for an API."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "740f9c65-5e2e-43f0-a638-ad069691c1db",
+                                          "name": "Successful response",
+                                          "originalRequest": {
+                                            "method": "POST",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"gatewayServiceAccount\": \"<string>\",\n  \"serviceConfigId\": \"<string>\",\n  \"state\": \"DELETING\",\n  \"openapiDocuments\": [\n    {\n      \"document\": {\n        \"path\": \"<string>\",\n        \"contents\": \"<string>\"\n      }\n    },\n    {\n      \"document\": {\n        \"path\": \"<string>\",\n        \"contents\": \"<string>\"\n      }\n    }\n  ],\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api/configs?apiConfigId=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "v1",
+                                                "projects",
+                                                ":project",
+                                                "locations",
+                                                "global",
+                                                "apis",
+                                                ":api",
+                                                "configs"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "key": "apiConfigId",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "project"
+                                                },
+                                                {
+                                                  "key": "api"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                          "createdAt": "2026-07-28T01:45:51.000Z",
+                                          "updatedAt": "2026-07-28T01:45:51.000Z",
+                                          "uid": "35240-740f9c65-5e2e-43f0-a638-ad069691c1db"
+                                        }
+                                      ],
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-44e35db4-a9b8-45d5-bc23-6573310cc2e1"
+                                    }
+                                  ],
+                                  "id": "28a5391a-37b2-40b8-8b8a-8979804296c7",
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-28a5391a-37b2-40b8-8b8a-8979804296c7"
+                                },
+                                {
+                                  "name": "Google Cloud API Gateway Get an API",
+                                  "id": "1dab8aa5-cf82-45a6-af8e-2ea3743834cc",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        "global",
+                                        "apis",
+                                        ":api"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "43bc6f40-b79f-4d88-8a07-ee600254b5cc",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "85f3f407-e787-4306-a1f8-6a390cf952fe",
+                                          "key": "api",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Gets an API resource."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "dc066dfe-0548-4e2a-8259-59052e18a0ab",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            "global",
+                                            "apis",
+                                            ":api"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "api"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"managedService\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"aute94\": \"<string>\",\n    \"laborum__1e\": \"<string>\"\n  },\n  \"state\": \"CREATING\"\n}",
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-dc066dfe-0548-4e2a-8259-59052e18a0ab"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-1dab8aa5-cf82-45a6-af8e-2ea3743834cc"
+                                },
+                                {
+                                  "name": "Google Cloud API Gateway Delete an API",
+                                  "id": "496a7904-075f-4bf3-94bf-ad5b9bc38e5b",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        "global",
+                                        "apis",
+                                        ":api"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "ce63d5ee-6c2f-473f-8f3b-180f79b2941f",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "e12771fc-900d-43e5-a682-01c2b3241e58",
+                                          "key": "api",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Deletes an API resource."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "10eea599-8eb4-43bb-91b1-4bf0bb10c1db",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis/:api",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            "global",
+                                            "apis",
+                                            ":api"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "api"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                      "createdAt": "2026-07-28T01:45:51.000Z",
+                                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                                      "uid": "35240-10eea599-8eb4-43bb-91b1-4bf0bb10c1db"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-496a7904-075f-4bf3-94bf-ad5b9bc38e5b"
+                                }
+                              ],
+                              "id": "d7a20d00-3bd3-42d7-9f81-bf0ce5f30671",
+                              "createdAt": "2026-07-28T01:45:51.000Z",
+                              "updatedAt": "2026-07-28T01:45:51.000Z",
+                              "uid": "35240-d7a20d00-3bd3-42d7-9f81-bf0ce5f30671"
+                            },
+                            {
+                              "name": "Google Cloud API Gateway List APIs",
+                              "id": "77bba22b-3a83-4347-b49b-9e883def55e6",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    "global",
+                                    "apis"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "d8e76e67-9743-4185-aee5-3b06be973c8a",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Lists APIs in a project."
+                              },
+                              "response": [
+                                {
+                                  "id": "8d8394b0-6cfa-4633-bcec-a5491b2255cc",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        "global",
+                                        "apis"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"apis\": [\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"managedService\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"labels\": {\n        \"doloreb_d\": \"<string>\"\n      },\n      \"state\": \"UPDATING\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"managedService\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"labels\": {\n        \"culpa_53c\": \"<string>\",\n        \"fugiat8ca\": \"<string>\",\n        \"et_d4\": \"<string>\"\n      },\n      \"state\": \"UPDATING\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-8d8394b0-6cfa-4633-bcec-a5491b2255cc"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:45:51.000Z",
+                              "updatedAt": "2026-07-28T01:45:51.000Z",
+                              "uid": "35240-77bba22b-3a83-4347-b49b-9e883def55e6"
+                            },
+                            {
+                              "name": "Google Cloud API Gateway Create an API",
+                              "id": "7184ff8e-c563-42fb-8cda-b2d525e19f99",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"managedService\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"aute94\": \"<string>\",\n    \"laborum__1e\": \"<string>\"\n  },\n  \"state\": \"CREATING\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis?apiId=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    "global",
+                                    "apis"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "apiId",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "cfc8d664-f273-4b53-b80a-9dcb2aef827d",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Creates a new API resource."
+                              },
+                              "response": [
+                                {
+                                  "id": "b7694998-71a0-446e-9aa5-2133a0388b31",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"managedService\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"labels\": {\n    \"aute94\": \"<string>\",\n    \"laborum__1e\": \"<string>\"\n  },\n  \"state\": \"CREATING\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/global/apis?apiId=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        "global",
+                                        "apis"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "apiId",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                  "createdAt": "2026-07-28T01:45:51.000Z",
+                                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                                  "uid": "35240-b7694998-71a0-446e-9aa5-2133a0388b31"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:45:51.000Z",
+                              "updatedAt": "2026-07-28T01:45:51.000Z",
+                              "uid": "35240-7184ff8e-c563-42fb-8cda-b2d525e19f99"
+                            }
+                          ],
+                          "id": "6e3f25c1-a36c-42c8-8bc9-15dcb4230a84",
+                          "createdAt": "2026-07-28T01:45:51.000Z",
+                          "updatedAt": "2026-07-28T01:45:51.000Z",
+                          "uid": "35240-6e3f25c1-a36c-42c8-8bc9-15dcb4230a84"
+                        }
+                      ],
+                      "id": "7d319657-bf5a-4d6a-88d6-0437c89a1ea8",
+                      "createdAt": "2026-07-28T01:45:51.000Z",
+                      "updatedAt": "2026-07-28T01:45:51.000Z",
+                      "uid": "35240-7d319657-bf5a-4d6a-88d6-0437c89a1ea8"
+                    }
+                  ],
+                  "id": "7923742e-c204-47af-ba35-ec19d3d58978",
+                  "createdAt": "2026-07-28T01:45:51.000Z",
+                  "updatedAt": "2026-07-28T01:45:51.000Z",
+                  "uid": "35240-7923742e-c204-47af-ba35-ec19d3d58978"
+                }
+              ],
+              "id": "f5bb6a1e-d743-45d4-8a69-8d10a2ac6c8b",
+              "createdAt": "2026-07-28T01:45:51.000Z",
+              "updatedAt": "2026-07-28T01:45:51.000Z",
+              "uid": "35240-f5bb6a1e-d743-45d4-8a69-8d10a2ac6c8b"
+            }
+          ],
+          "id": "6b0d4673-d16e-4398-8830-c4a39c54e339",
+          "createdAt": "2026-07-28T01:45:51.000Z",
+          "updatedAt": "2026-07-28T01:45:51.000Z",
+          "uid": "35240-6b0d4673-d16e-4398-8830-c4a39c54e339"
+        }
+      ],
+      "id": "ec24a86e-4e7c-4f99-ad1b-44d997f61302",
+      "createdAt": "2026-07-28T01:45:51.000Z",
+      "updatedAt": "2026-07-28T01:45:51.000Z",
+      "uid": "35240-ec24a86e-4e7c-4f99-ad1b-44d997f61302"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://apigateway.googleapis.com"
+    }
+  ]
+}
