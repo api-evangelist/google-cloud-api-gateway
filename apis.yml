@@ -50,6 +50,12 @@ apis:
   - type: JSONSchema
     url: json-schema/json-schema.yml
 common:
+  - type: TrustCenter
+    url: https://cloud.google.com/trust-center
+  - type: SDKs
+    url: https://cloud.google.com/sdk
+  - type: ChangeLog
+    url: https://docs.cloud.google.com/release-notes
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/google-cloud-api-gateway/overview
   - type: AgenticAccess
