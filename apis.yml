@@ -5,6 +5,18 @@ description: >-
   that is consistent across all of your services. It is a fully managed, pay-per-use gateway designed for serverless
   workloads, supporting Cloud Functions, Cloud Run, and App Engine backends. API Gateway includes security features like
   authentication and API key validation, as well as monitoring, logging, and tracing capabilities.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-11'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
