@@ -356,6 +356,19 @@ components:
           type: object
           additionalProperties:
             type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
     ApiConfig:
       type: object
       properties:
@@ -396,28 +409,15 @@ components:
         updateTime:
           type: string
           format: date-time
-    ListApisResponse:
+    ListGatewaysResponse:
       type: object
       properties:
-        apis:
+        gateways:
           type: array
           items:
-            $ref: '#/components/schemas/Api'
+            $ref: '#/components/schemas/Gateway'
         nextPageToken:
           type: string
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        metadata:
-          type: object
-        response:
-          type: object
-        error:
-          type: object
     Api:
       type: object
       properties:
@@ -447,6 +447,15 @@ components:
           - FAILED
           - DELETING
           - UPDATING
+    ListApisResponse:
+      type: object
+      properties:
+        apis:
+          type: array
+          items:
+            $ref: '#/components/schemas/Api'
+        nextPageToken:
+          type: string
     ListApiConfigsResponse:
       type: object
       properties:
@@ -454,14 +463,5 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ApiConfig'
-        nextPageToken:
-          type: string
-    ListGatewaysResponse:
-      type: object
-      properties:
-        gateways:
-          type: array
-          items:
-            $ref: '#/components/schemas/Gateway'
         nextPageToken:
           type: string
