@@ -323,52 +323,15 @@ paths:
       - Projects
 components:
   schemas:
-    Gateway:
+    ListGatewaysResponse:
       type: object
       properties:
-        name:
+        gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/Gateway'
+        nextPageToken:
           type: string
-          description: The gateway name in the format projects/{project}/locations/{location}/gateways/{gateway}.
-        displayName:
-          type: string
-        apiConfig:
-          type: string
-          description: The API config associated with this gateway.
-        state:
-          type: string
-          enum:
-          - STATE_UNSPECIFIED
-          - CREATING
-          - ACTIVE
-          - FAILED
-          - DELETING
-          - UPDATING
-        defaultHostname:
-          type: string
-          description: The default API gateway host name.
-        createTime:
-          type: string
-          format: date-time
-        updateTime:
-          type: string
-          format: date-time
-        labels:
-          type: object
-          additionalProperties:
-            type: string
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        metadata:
-          type: object
-        response:
-          type: object
-        error:
-          type: object
     ApiConfig:
       type: object
       properties:
@@ -409,15 +372,61 @@ components:
         updateTime:
           type: string
           format: date-time
-    ListGatewaysResponse:
+    Gateway:
       type: object
       properties:
-        gateways:
+        name:
+          type: string
+          description: The gateway name in the format projects/{project}/locations/{location}/gateways/{gateway}.
+        displayName:
+          type: string
+        apiConfig:
+          type: string
+          description: The API config associated with this gateway.
+        state:
+          type: string
+          enum:
+          - STATE_UNSPECIFIED
+          - CREATING
+          - ACTIVE
+          - FAILED
+          - DELETING
+          - UPDATING
+        defaultHostname:
+          type: string
+          description: The default API gateway host name.
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+    ListApisResponse:
+      type: object
+      properties:
+        apis:
           type: array
           items:
-            $ref: '#/components/schemas/Gateway'
+            $ref: '#/components/schemas/Api'
         nextPageToken:
           type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
     Api:
       type: object
       properties:
@@ -447,15 +456,6 @@ components:
           - FAILED
           - DELETING
           - UPDATING
-    ListApisResponse:
-      type: object
-      properties:
-        apis:
-          type: array
-          items:
-            $ref: '#/components/schemas/Api'
-        nextPageToken:
-          type: string
     ListApiConfigsResponse:
       type: object
       properties:
