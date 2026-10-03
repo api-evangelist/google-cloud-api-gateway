@@ -323,13 +323,13 @@ paths:
       - Projects
 components:
   schemas:
-    ListGatewaysResponse:
+    ListApisResponse:
       type: object
       properties:
-        gateways:
+        apis:
           type: array
           items:
-            $ref: '#/components/schemas/Gateway'
+            $ref: '#/components/schemas/Api'
         nextPageToken:
           type: string
     ApiConfig:
@@ -372,6 +372,57 @@ components:
         updateTime:
           type: string
           format: date-time
+    Api:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The API resource name in the format projects/{project}/locations/global/apis/{api}.
+        displayName:
+          type: string
+        managedService:
+          type: string
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+        state:
+          type: string
+          enum:
+          - STATE_UNSPECIFIED
+          - CREATING
+          - ACTIVE
+          - FAILED
+          - DELETING
+          - UPDATING
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
+    ListGatewaysResponse:
+      type: object
+      properties:
+        gateways:
+          type: array
+          items:
+            $ref: '#/components/schemas/Gateway'
+        nextPageToken:
+          type: string
     Gateway:
       type: object
       properties:
@@ -405,57 +456,6 @@ components:
           type: object
           additionalProperties:
             type: string
-    ListApisResponse:
-      type: object
-      properties:
-        apis:
-          type: array
-          items:
-            $ref: '#/components/schemas/Api'
-        nextPageToken:
-          type: string
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        metadata:
-          type: object
-        response:
-          type: object
-        error:
-          type: object
-    Api:
-      type: object
-      properties:
-        name:
-          type: string
-          description: The API resource name in the format projects/{project}/locations/global/apis/{api}.
-        displayName:
-          type: string
-        managedService:
-          type: string
-        createTime:
-          type: string
-          format: date-time
-        updateTime:
-          type: string
-          format: date-time
-        labels:
-          type: object
-          additionalProperties:
-            type: string
-        state:
-          type: string
-          enum:
-          - STATE_UNSPECIFIED
-          - CREATING
-          - ACTIVE
-          - FAILED
-          - DELETING
-          - UPDATING
     ListApiConfigsResponse:
       type: object
       properties:
