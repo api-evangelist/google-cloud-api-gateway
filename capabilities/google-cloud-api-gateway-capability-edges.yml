@@ -1,0 +1,25 @@
+slug: google-cloud-api-gateway
+provider: Google Cloud API Gateway
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Projects
+  spec_file: google-cloud-api-gateway-projects-api-openapi.yml
+  capability_id: BC-4270.10
+  capability_id_l1: BC-4270
+  capability_name: Public API Lifecycle Management
+  confidence: 0.7
+  evidence: POST /v1/projects/{project}/locations/global/apis  createApi  Create an API; POST .../apis/{api}/configs  createApiConfig
+  reason: Operations create and version APIs, API configs and gateways described by OpenAPI specs — API
+    specification/versioning lifecycle for exposed APIs. Could alternatively be seen as IT infrastructure,
+    so moderate confidence.
