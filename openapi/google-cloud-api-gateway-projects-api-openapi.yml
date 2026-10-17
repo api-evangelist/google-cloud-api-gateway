@@ -323,6 +323,70 @@ paths:
       - Projects
 components:
   schemas:
+    ListApiConfigsResponse:
+      type: object
+      properties:
+        apiConfigs:
+          type: array
+          items:
+            $ref: '#/components/schemas/ApiConfig'
+        nextPageToken:
+          type: string
+    Gateway:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The gateway name in the format projects/{project}/locations/{location}/gateways/{gateway}.
+        displayName:
+          type: string
+        apiConfig:
+          type: string
+          description: The API config associated with this gateway.
+        state:
+          type: string
+          enum:
+          - STATE_UNSPECIFIED
+          - CREATING
+          - ACTIVE
+          - FAILED
+          - DELETING
+          - UPDATING
+        defaultHostname:
+          type: string
+          description: The default API gateway host name.
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
+    ListApisResponse:
+      type: object
+      properties:
+        apis:
+          type: array
+          items:
+            $ref: '#/components/schemas/Api'
+        nextPageToken:
+          type: string
     ApiConfig:
       type: object
       properties:
@@ -363,70 +427,6 @@ components:
         updateTime:
           type: string
           format: date-time
-    Gateway:
-      type: object
-      properties:
-        name:
-          type: string
-          description: The gateway name in the format projects/{project}/locations/{location}/gateways/{gateway}.
-        displayName:
-          type: string
-        apiConfig:
-          type: string
-          description: The API config associated with this gateway.
-        state:
-          type: string
-          enum:
-          - STATE_UNSPECIFIED
-          - CREATING
-          - ACTIVE
-          - FAILED
-          - DELETING
-          - UPDATING
-        defaultHostname:
-          type: string
-          description: The default API gateway host name.
-        createTime:
-          type: string
-          format: date-time
-        updateTime:
-          type: string
-          format: date-time
-        labels:
-          type: object
-          additionalProperties:
-            type: string
-    ListApiConfigsResponse:
-      type: object
-      properties:
-        apiConfigs:
-          type: array
-          items:
-            $ref: '#/components/schemas/ApiConfig'
-        nextPageToken:
-          type: string
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        metadata:
-          type: object
-        response:
-          type: object
-        error:
-          type: object
-    ListApisResponse:
-      type: object
-      properties:
-        apis:
-          type: array
-          items:
-            $ref: '#/components/schemas/Api'
-        nextPageToken:
-          type: string
     Api:
       type: object
       properties:
